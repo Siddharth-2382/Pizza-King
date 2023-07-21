@@ -45,7 +45,7 @@ body {
 }
 
 .nav-link {
-  color: black;
+  color: #ffffff;
   font-size: var(--large-font-size);
   margin-right: 2rem;
 }
@@ -77,21 +77,59 @@ body {
 
 .btn-secondary:hover {
   cursor: pointer;
-  border: 1px solid #ff2911;
-  background-color: #ff2911;
+  border: 1px solid #d42e1c;
+  background-color: #d42e1c;
   color: white;
 }
 
 .btn-lg {
-  padding: 1rem 5rem;
+  padding: 1rem 4rem;
 }
 
 .btn-md {
   padding: 0.75rem 2rem;
 }
 
+/* CSS for Hero Section */
+
+.background-pizza {
+  height: 64rem;
+  z-index: -999;
+  position: absolute;
+  top: -23%;
+  right: 0;
+  filter: drop-shadow(-3px 0px 16px rgba(0, 0, 0, 0.75));
+}
+
+.hero-section {
+  margin: 6rem 3rem;
+}
+
+.hero-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.75rem;
+  font-weight: 900;
+}
+
+.brand-name {
+  color: #d42e1c;
+  font-family: "Montserrat", sans-serif;
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.cta {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
 /* Media Queries for Mobile Screens */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  /* CSS for Navbar */
   .navbar {
     margin: 0;
   }
@@ -102,7 +140,7 @@ body {
     aspect-ratio: 1;
     margin: 1rem;
     border: 0;
-    background: url("./components/Images/hamburger-menu.png");
+    background: url("./components/Images/hamburger.svg");
     background-repeat: no-repeat;
     cursor: pointer;
     z-index: 999;
@@ -111,6 +149,7 @@ body {
   .mobile-nav-toggle[aria-expanded="true"] {
     background: url("./components/Images/cross.svg");
     background-repeat: no-repeat;
+    filter: invert();
   }
 
   .primary-navigation-container {
@@ -132,7 +171,7 @@ body {
   .primary-navigation {
     flex-direction: column;
     align-items: start;
-    margin-top: 7rem;
+    margin: 7rem 0 auto auto;
   }
 
   .nav-link-item {
@@ -143,18 +182,124 @@ body {
     margin-right: 0;
   }
 
-  .btn {
-    border-radius: 0%;
+  .btn-lg {
+    padding: 0.75rem 2rem;
+    font-size: 0.8rem;
   }
 
   .btn-md {
     padding: 0.75rem 2.5rem;
+    border-radius: 0%;
+  }
+
+  /* CSS for Hero Section */
+  .background-pizza {
+    height: 111vw;
+    object-fit: cover;
+    position: sticky;
+    transform: rotate(90deg);
+    left: 13%;
+  }
+
+  .hero-section {
+    margin: 3rem 1.5rem 0;
+  }
+
+  .hero-title {
+    font-size: 1.4rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.85rem;
+  }
+}
+
+/* Media Queries for Small Tablet Screens */
+@media (max-width: 819px) and (min-width: 768px) {
+  /* CSS for Hero Section */
+
+  .background-pizza {
+    height: 85vh;
+    transform: rotate(90deg);
+    position: sticky;
+    left: 12%;
+  }
+}
+
+/* Media Queries for Large Tablet Screens */
+@media (max-width: 1023px) and (min-width: 820px) {
+  /* CSS for Navbar */
+  .navbar {
+    margin: 0 1rem 0 2rem;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    height: 1.5rem;
+    aspect-ratio: 1;
+    margin: 1rem;
+    border: 0;
+    background: url("./components/Images/hamburger.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background: url("./components/Images/cross.svg");
+    background-repeat: no-repeat;
+    filter: invert();
+  }
+
+  .primary-navigation-container {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: hsl(0 100% 0% / 0.4);
+    -webkit-backdrop-filter: blur(0.3rem);
+    backdrop-filter: blur(0.3rem);
+    transform: translateX(100%);
+    transition: all 0.4s ease-out;
+  }
+
+  .primary-navigation-container[data-visible="true"] {
+    transform: translateX(0);
+  }
+
+  .primary-navigation {
+    flex-direction: column;
+    align-items: start;
+    margin: 7rem 7rem auto auto;
+  }
+
+  .nav-link-item {
+    margin: auto 8rem 1.5rem 2rem;
+  }
+
+  .nav-link {
+    margin-right: 0;
+  }
+
+  .btn-md {
+    padding: 0.75rem 2.5rem;
+    border-radius: 0%;
+  }
+
+  /* CSS for Hero Section */
+
+  .background-pizza {
+    height: 78.5vh;
+    transform: rotate(90deg);
+    position: sticky;
+    left: 12%;
   }
 }
 
 /* Media Queries for Tablet Screens */
 
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 1024px) and (min-width: 821px) {
+  /* CSS for Navbar */
   .navbar {
     margin: 0 1rem;
   }
@@ -166,5 +311,23 @@ body {
   .nav-link {
     font-size: var(--large-font-size);
     margin-right: 1.5rem;
+  }
+
+  .btn-lg {
+    padding: 1rem 3rem;
+  }
+
+  /* CSS for Hero Section */
+  .background-pizza {
+    height: 48rem;
+    top: -7.5%;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-tagline {
+    width: 27rem;
   }
 }
