@@ -189,6 +189,45 @@ button {
   padding: 1rem 0 2rem;
 }
 
+/* CSS for Testimonial Section */
+
+.testimonial-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.testimonial-title span {
+  color: #d42e1c;
+  display: block;
+}
+
+.carousel-item {
+  background-color: #121212;
+  color: #ffffff;
+  text-align: left;
+  margin: 2rem 10rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.testimonial::before {
+  content: "\201C";
+  font-family: "Times New Roman", Times, serif;
+  display: block;
+  font-size: 4rem;
+  line-height: 2rem;
+}
+
+.carousel-item p {
+  padding: 0 2rem 1rem;
+}
+
+.carousel-item span {
+  margin-top: 1rem;
+  padding: 0 2rem 1rem;
+  font-style: italic;
+}
+
 /* Media Queries for Mobile Screens */
 @media (max-width: 767px) {
   /* CSS for Navbar */
