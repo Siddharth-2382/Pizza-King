@@ -109,7 +109,7 @@ h2 {
   height: 64rem;
   z-index: -999;
   position: absolute;
-  top: -23%;
+  top: -20%;
   right: 0;
   filter: drop-shadow(-3px 0px 16px rgba(0, 0, 0, 0.75));
 }
@@ -193,7 +193,7 @@ button {
 
 .testimonial-container {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 6rem;
 }
 
 .testimonial-title span {
@@ -201,13 +201,20 @@ button {
   display: block;
 }
 
+.carousel-container {
+  display: flex;
+  overflow-x: hidden;
+}
+
 .carousel-item {
   background-color: #121212;
   color: #ffffff;
   text-align: left;
-  margin: 2rem 10rem;
+  margin: 2rem 0rem;
   padding: 2rem;
   border-radius: 1rem;
+  min-width: 100%;
+  transition: all 0.75s ease-in-out;
 }
 
 .testimonial::before {
@@ -226,6 +233,64 @@ button {
   margin-top: 1rem;
   padding: 0 2rem 1rem;
   font-style: italic;
+}
+
+.custom {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #000000;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  top: 7px;
+  left: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
 }
 
 /* Media Queries for Mobile Screens */
@@ -327,6 +392,15 @@ button {
     padding: 4rem 3rem;
     justify-content: left;
     overflow-x: auto;
+  }
+
+  /* CSS for Testimonial Section */
+  .testimonial-container {
+    padding: 2rem 2rem;
+  }
+
+  .carousel-item {
+    padding: 1rem;
   }
 }
 
@@ -439,6 +513,11 @@ button {
   .card button {
     top: -40%;
   }
+
+  /* CSS for Testimonial Section */
+  .testimonial-container {
+    padding: 2rem 3rem;
+  }
 }
 
 /* Media Queries for Medium Tablet Screens */
@@ -495,6 +574,11 @@ button {
 
   .card button {
     top: -40%;
+  }
+
+  /* CSS for Testimonial Section */
+  .testimonial-container {
+    padding: 2rem 4rem;
   }
 }
 
