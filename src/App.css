@@ -290,7 +290,32 @@ button {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: white;
+  background: #ffffff;
+}
+
+/* CSS for Footer Section */
+.footer-container {
+  padding: 3rem 6rem;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item-title {
+  padding-bottom: 1rem;
+  text-decoration: underline;
+}
+
+.footer-container a {
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding-bottom: 1rem;
+}
+
+.socials-container {
+  display: flex;
+  gap: 1rem;
 }
 
 /* Media Queries for Mobile Screens */
@@ -401,6 +426,16 @@ button {
 
   .carousel-item {
     padding: 1rem;
+  }
+
+  /* CSS for Footer Section */
+  .footer-container {
+    display: block;
+    padding: 3rem;
+  }
+
+  .footer-container > div {
+    padding-bottom: 2rem;
   }
 }
 
@@ -518,6 +553,11 @@ button {
   .testimonial-container {
     padding: 2rem 3rem;
   }
+
+  /* CSS for Footer Section */
+  .footer-container {
+    padding: 3rem;
+  }
 }
 
 /* Media Queries for Medium Tablet Screens */
@@ -579,6 +619,11 @@ button {
   /* CSS for Testimonial Section */
   .testimonial-container {
     padding: 2rem 4rem;
+  }
+
+  /* CSS for Footer Section */
+  .footer-container {
+    padding: 3rem 4rem;
   }
 }
 
